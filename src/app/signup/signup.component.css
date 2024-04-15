@@ -1,0 +1,84 @@
+/* Container */
+.main{
+  background-image: url('https://www.thebanker.com/var/ezflow_site/storage/images/media/images/digital-currency-bank/12654475-1-eng-GB/Digital-currency-bank.jpg');
+  background-size: cover;
+  background-image: transparent;
+}
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Form */
+.main {
+  background-color: #d4e0df;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #17a2b8;
+}
+.cols-sm-2 {
+  color: #8de3f0;
+}
+.anc{
+  color: #d4e0df;
+}
+
+.panel-heading {
+  text-align: center;
+}
+
+.title {
+  margin-top: 0;
+  color: #17a2b8;
+}
+
+.panel-title {
+  margin-bottom: 20px;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.control-label {
+  font-weight: bold;
+}
+
+.input-group-addon {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-info {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+

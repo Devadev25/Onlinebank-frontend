@@ -1,0 +1,32 @@
+<div class="transfer-money-container">
+<!-- [ngStyle]="{
+  'background-image': 'url(/home/agira/bankfront/Agirabank/src/assets/depositphotos_279150994-stock-photo-dollar-currency-business-banking-finance.webp)',
+  'background-repeat': 'no-repeat',
+  'background-size': 'cover'
+}"> -->
+.
+
+  <h2 class="money">Transfer Money</h2>
+  <form [formGroup]="transferForm" (ngSubmit)="onTransfer()">
+    <div class="form-group">
+      <label for="destinationAccountNumber">Destination Account Number</label>
+      <input type="text" id="destinationAccountNumber" formControlName="destinationAccountNumber" required>
+      <div *ngIf="transferForm.get('destinationAccountNumber')?.touched && transferForm.get('destinationAccountNumber')?.hasError('required')" class="error-message">
+        Destination Account Number is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" formControlName="amount" required>
+      <div *ngIf="transferForm.get('amount')?.touched && transferForm.get('amount')?.hasError('required')" class="error-message">
+        Amount is required.
+      </div>
+      <div *ngIf="transferForm.get('amount')?.touched && transferForm.get('amount')?.hasError('min')" class="error-message">
+        Amount must be greater than or equal to 0.
+      </div>
+    </div>
+    <button class="button" type="submit" [disabled]="!transferForm.valid">Transfer</button>
+    <app-logout class="logout-button"></app-logout>
+  </form>
+  <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

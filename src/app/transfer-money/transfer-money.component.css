@@ -1,0 +1,51 @@
+.transfer-money-container {
+  background-image: url('https://www.thebanker.com/var/ezflow_site/storage/images/media/images/digital-currency-bank/12654475-1-eng-GB/Digital-currency-bank.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.transfer-money-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.button{
+  color: black;
+}
+
+label {
+
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #015170;
+}
+.logout-button {
+  margin-left: 10px;
+
+}
+
+.error-message {
+  color: rgb(247, 13, 13);
+  margin-top: 5px;
+}
+.money
+{
+  color: black;
+}
+.form-group{
+  color: black;
+}

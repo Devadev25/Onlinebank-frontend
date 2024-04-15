@@ -1,0 +1,54 @@
+<div
+  class="background-image"
+  [ngStyle]="{
+    'background-image': 'url(./assets/ai-transaction-banking-1693602794.jpg)',
+    'background-repeat': 'no-repeat',
+    'background-size': 'cover',
+  }"
+>
+  <div class="overlay"></div>
+  <div class="transaction-history-container">
+    <h2>Transaction History</h2>
+    <div class="filter-section">
+      <label for="startDate">Start Date:</label>
+      <input
+        type="date"
+        id="startDate"
+        name="startDate"
+        [(ngModel)]="startDate"
+      />
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" [(ngModel)]="endDate" />
+      <button (click)="fetchTransactions()">Filter</button>
+       <app-logout class="logout-button"></app-logout>
+    </div>
+    <div *ngIf="transactions.length > 0" class="transaction-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Destination Account</th>
+            <th>Date</th>
+            <th>Transaction Id</th>
+            <th>Transaction type</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaction of transactions">
+            <td>{{ transaction.toAccountNumber }}</td>
+            <td>{{ transaction.createdAt }}</td>
+            <td>{{ transaction.transactionId }}</td>
+            <td>{{ transaction.transactionType }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="transactions.length === 0" class="no-transactions">
+      <p>No transactions found.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,266 @@
+<div class="main">
+  <div class="container">
+    <div class="row main">
+      <div class="panel-heading">
+        <div class="panel-title text-center">
+          <h1 class="title">Sign Up</h1>
+          <hr />
+        </div>
+      </div>
+      <div class="main-login main-center">
+        <form
+          class="row g3 need"
+          [formGroup]="reactiveForms"
+          (submit)="onSubmit()"
+        >
+          <div class="form-group">
+            <label for="firstName" class="cols-sm-2 control-label"
+              >First Name</label
+            >
+            <div
+              class="text-danger"
+              *ngIf="
+                reactiveForms.controls['firstName'].invalid &&
+                reactiveForms.controls['firstName'].touched
+              "
+            ></div>
+
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-user fa" aria-hidden="true"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="firstName"
+                  placeholder="Enter your first name"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName" class="cols-sm-2 control-label"
+              >Last Name</label
+            >
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-user fa" aria-hidden="true"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="lastName"
+                  placeholder="Enter your last name"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName" class="cols-sm-2 control-label"
+              >Other Name</label
+            >
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-user fa" aria-hidden="true"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="otherName"
+                  placeholder="Enter your last name"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="cols-sm-2 control-label">Address</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="address"
+                  placeholder="Enter your Address"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="Stateoforigin" class="cols-sm-2 control-label"
+              >State of origin</label
+            >
+            <div class="cols-sm-10">
+              <select
+                id="stateOfOrigin"
+                class="form-control"
+                name="gender"
+                formControlName="stateOfOrigin"
+                required
+              >
+                <option value="" disabled selected>Select your state</option>
+                <option value="male">Andhra Pradesh</option>
+                <option value="female">Arunachal Pradesh</option>
+                <option value="other">Assam</option>
+                <option value="other">Bihar</option>
+                <option value="other">Chhattisgarh</option>
+                <option value="other">Goa</option>
+                <option value="other">Gujarat</option>
+                <option value="other">Haryana</option>
+                <option value="other">Himachal Pradesh</option>
+                <option value="other">Jharkhand</option>
+                <option value="other">Karnataka</option>
+                <option value="other">Kerala</option>
+                <option value="other">Madhya Pradesh</option>
+                <option value="other">Maharashtra</option>
+                <option value="other">Manipur</option>
+                <option value="other">Meghalaya</option>
+                <option value="other">Mizoram</option>
+                <option value="other">Nagaland</option>
+                <option value="other">Odisha</option>
+                <option value="other">Punjab</option>
+                <option value="other">Rajasthan</option>
+                <option value="other">Sikkim</option>
+                <option value="other">Tamil Nadu</option>
+                <option value="other">Telangana</option>
+                <option value="other">Tripura</option>
+                <option value="other">Uttar Pradesh</option>
+                <option value="other">Uttarakhand</option>
+                <option value="other">West Bengal</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="gender" class="cols-sm-2 control-label">Gender</label>
+            <div class="cols-sm-10">
+              <select
+                id="gender"
+                class="form-control"
+                name="gender"
+                formControlName="gender"
+                required
+              >
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="cols-sm-2 control-label"> Email</label>
+
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-envelope fa" aria-hidden="true"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="email"
+                  placeholder="Enter your Email"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="cols-sm-2 control-label"
+              >Password</label
+            >
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-lock fa-lg" aria-hidden="true"></i
+                ></span>
+                <input
+                  type="{{ showPassword ? 'text' : 'password' }}"
+                  class="form-control"
+                  formControlName="password"
+                  placeholder="Enter your Password"
+                  required="required"
+                />
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input
+                    id="showPassword"
+                    type="checkbox"
+                    (change)="togglePasswordVisibility()"
+                  />Show Password
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="cols-sm-2 control-label">Phone</label>
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-phone fa" aria-hidden="true"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="phoneNumber"
+                  placeholder="xxx-xxx-xxxx"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="cols-sm-2 control-label"
+              >Alternative Phone</label
+            >
+            <div class="cols-sm-10">
+              <div class="input-group">
+                <span class="input-group-addon"
+                  ><i class="fa fa-phone fa" aria-hidden="true"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="alternativePhoneNumber"
+                  placeholder="xxx-xxx-xxxx"
+                  required="required"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary btn-lg btn-block login-button"
+            (click)="onSubmit()"
+          >
+            Sign up!
+          </button>
+
+          <hr />
+
+          <div class="form-group">
+            <a class="btn btn-info btn-lg btn-block login-button" href="/"
+              >Cancel</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

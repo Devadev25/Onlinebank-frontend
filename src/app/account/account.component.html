@@ -1,0 +1,15 @@
+<div class="account-container">
+  <h2>Account Information</h2>
+  <button (click)="onSubmit()">Check Balance</button>
+  <app-logout class="logout-button"></app-logout>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <div *ngIf="balanceInfo" class="balance-info">
+    <p><strong>Account Number:</strong> {{ balanceInfo.accountNumber }}</p>
+    <p><strong>Account Name:</strong> {{ balanceInfo.accountName }}</p>
+    <p><strong>Account Balance:</strong> Rs.{{ balanceInfo.accountBalance }}</p>
+    <div class="button-container">
+   <button> <a [routerLink]="'/transferview'">Transaction History</a></button>
+   <button><a [routerLink]="'/transfermoney'">Transfer Money</a></button>
+</div>
+  </div>
+</div>

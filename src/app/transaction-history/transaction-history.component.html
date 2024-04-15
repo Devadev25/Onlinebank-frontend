@@ -1,0 +1,27 @@
+<div
+  class="background-image"
+  [ngStyle]="{
+    'background-image': 'url(./assets/ai-transaction-banking-1693602794.jpg)',
+    'background-repeat': 'no-repeat',
+    'background-size': 'cover'
+  }"
+>
+  <div class="overlay"></div>
+  <div class="transaction-history-container">
+    <h2>Transaction Pdf </h2>
+    <div class="filter-section">
+      <label for="startDate">Start Date:</label>
+      <input
+        type="date"
+        id="startDate"
+        name="startDate"
+        [(ngModel)]="startDate"
+      />
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" [(ngModel)]="endDate" />
+      <button (click)="fetchTransactions()">Filter</button>
+      <app-logout class="logout-button" ></app-logout>
+    </div>
+  </div>
+
+</div>
