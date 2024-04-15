@@ -12,5 +12,6 @@ export class DashboardService {
   constructor(private hhtp:HttpClient) { }
   getTotalTransactions():Observable<number>{
     return this.hhtp.get<number>(this.apiUrl);
+
   }
 }
